@@ -62,7 +62,7 @@ export default function Home() {
       <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">Comprehensive Services</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">Meet Our team</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               State-of-the-art brain imaging and analysis powered by leading experts.
             </p>
@@ -87,7 +87,7 @@ export default function Home() {
             <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-8 uppercase tracking-wider">About KOnsortium</span>
             <h2 className="text-5xl md:text-6xl font-bold text-black mb-8 leading-tight">Excellence in Neurology</h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg">
-              Our consortium brings together world-class neurologists, neuroradiologists, and cutting-edge technology to deliver unmatched brain examination services. 
+              Our Konsortium brings together world-class neurologists, neuroradiologists, and cutting-edge technology to deliver unmatched brain examination services. 
             </p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {stats.map((stat) => (
