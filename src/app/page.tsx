@@ -43,13 +43,13 @@ export default function Home() {
 
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-[url('/images/students.jpg')] bg-cover bg-center relative opacity-80 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:to-black/70 before:z-[-1]">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight">
             Best Brain Examinations
             <br />
             <span className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">KONSORTIUM</span>
-          </h1>
+          </h2>
           <p className="text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed">
-            Pioneering advanced neurology diagnostics with cutting-edge technology and expert care for superior brain health outcomes.
+          We are poised to make a most resounding impact on quality education
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#services" className="px-10 py-5 border-2 border-white/50 bg-transparent text-white font-semibold text-lg rounded-2xl hover:bg-white/10 hover:border-white transition-all duration-300">
