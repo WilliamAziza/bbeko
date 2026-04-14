@@ -38,27 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Image src="/images/logo.jpeg" alt="BEK Logo" width={40} height={40} className="rounded-lg h-auto w-auto object-contain" priority />
-            </div>
-    <div className="flex items-center md:space-x-8">
-              <button className="md:hidden p-1 -mr-1 rounded-full hover:bg-gray-200 focus:outline-none focus:shadow-outline">
-                <svg className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Services</a>
-                <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">About</a>
-                <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+
 
 
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-[url('/images/students.jpg')] bg-cover bg-center relative opacity-80 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:to-black/70 before:z-[-1]">
@@ -66,7 +46,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight">
             Best Brain Examinations
             <br />
-            <span className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">KOnsortium</span>
+            <span className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">KONSORTIUM</span>
           </h1>
           <p className="text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed">
             Pioneering advanced neurology diagnostics with cutting-edge technology and expert care for superior brain health outcomes.
