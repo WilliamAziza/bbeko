@@ -44,14 +44,22 @@ export default function Home() {
             <div className="flex items-center space-x-2">
               <Image src="/images/logo.jpeg" alt="BEK Logo" width={40} height={40} className="rounded-lg h-auto w-auto object-contain" priority />
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Services</a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">About</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Contact</a>
+    <div className="flex items-center md:space-x-8">
+              <button className="md:hidden p-1 -mr-1 rounded-full hover:bg-gray-200 focus:outline-none focus:shadow-outline">
+                <svg className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <div className="hidden md:flex items-center space-x-8">
+                <a href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Services</a>
+                <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">About</a>
+                <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2">Contact</a>
+              </div>
             </div>
           </div>
         </div>
       </nav>
+
 
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-[url('/images/students.jpg')] bg-cover bg-center relative opacity-80 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:to-black/70 before:z-[-1]">
         <div className="max-w-4xl mx-auto text-center relative z-10">
