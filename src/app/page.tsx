@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import Image from 'next/image';
 
 interface Service {
   icon: string;
+  image?: string;
   title: string;
   desc: string;
 }
@@ -15,32 +16,29 @@ interface Stat {
 
 export default function Home() {
   const services: Service[] = [
-    { icon: "🧠", title: "Advanced MRI", desc: "High-field MRI with AI-enhanced imaging for superior brain visualization." },
-    { icon: "⚡", title: "EEG Monitoring", desc: "Quantitative EEG analysis with source localization capabilities." },
-    { icon: "🔬", title: "CT & PET Scans", desc: "Multi-modal imaging including PET for metabolic brain assessment." },
-    { icon: "👥", title: "Expert Consults", desc: "Personalized neurology consultations with comprehensive reporting." }
+    { icon: '🧠', image: '/images/boss.jpeg', title: 'Advanced MRI', desc: 'High-field MRI with AI-enhanced imaging for superior brain visualization.' },
+    { icon: '⚡', image: '/images/francis.jpeg', title: 'EEG Monitoring', desc: 'Quantitative EEG analysis with source localization capabilities.' },
+    { icon: '🔬', image: '/images/boss.jpeg', title: 'CT & PET Scans', desc: 'Multi-modal imaging including PET for metabolic brain assessment.' },
+    { icon: '👥', image: '/images/francis.jpeg', title: 'Expert Consults', desc: 'Personalized neurology consultations with comprehensive reporting.' }
   ];
 
   const stats: Stat[] = [
-    { label: "Expert Team", value: "20+ certified neurologists" },
-    { label: "Technology", value: "Latest 3T MRI & AI analysis" },
-    { label: "Results", value: "24-hour comprehensive reports" },
-    { label: "Care", value: "Patient-centered approach" }
+    { label: 'Expert Team', value: '20+ certified neurologists' },
+    { label: 'Technology', value: 'Latest 3T MRI & AI analysis' },
+    { label: 'Results', value: '24-hour comprehensive reports' },
+    { label: 'Care', value: 'Patient-centered approach' }
   ];
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    console.log("Contact Form:", Object.fromEntries(formData));
-    alert("Thank you! Your inquiry has been received. We'll contact you soon. (Check browser console)");
+    console.log('Contact Form:', Object.fromEntries(formData));
+    alert('Thank you for your inquiry. Check browser console.');
     e.currentTarget.reset();
   };
 
   return (
     <>
-
-
-
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-[url('/images/students.jpg')] bg-cover bg-center relative opacity-80 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:to-black/70 before:z-[-1]">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight">
@@ -49,7 +47,7 @@ export default function Home() {
             <span className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">KONSORTIUM</span>
           </h2>
           <p className="text-xl md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed">
-          We are poised to make a most resounding impact on quality education
+            We are poised to make a most resounding impact on quality education
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#services" className="px-10 py-5 border-2 border-white/50 bg-transparent text-white font-semibold text-lg rounded-2xl hover:bg-white/10 hover:border-white transition-all duration-300">
@@ -62,7 +60,7 @@ export default function Home() {
       <section id="services" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">Meet Our team</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-black italic text-slate-800 mb-6 tracking-wide drop-shadow-md">MEET OUR TEAM</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               State-of-the-art brain imaging and analysis powered by leading experts.
             </p>
@@ -70,8 +68,14 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service) => (
               <div key={service.title} className="group bg-white p-10 rounded-3xl border border-gray-200 hover:shadow-2xl hover:-translate-y-4 hover:border-blue-400 transition-all duration-500 overflow-hidden shadow-lg">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-8 mx-auto shadow-lg">
-                  <span className="text-3xl group-hover:text-blue-600 transition-colors">{service.icon}</span>
+                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 mb-8 mx-auto shadow-xl border-4 border-white overflow-hidden">
+                  <Image 
+                    src={service.image || '/images/francis.jpeg'} 
+                    alt={service.title} 
+                    width={96} 
+                    height={96} 
+                    className="w-24 h-24 object-cover rounded-full group-hover:scale-110 transition-transform duration-300 shadow-lg" 
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-black mb-6 text-center group-hover:text-blue-600 transition-colors">{service.title}</h3>
                 <p className="text-gray-600 text-center leading-relaxed group-hover:text-black">{service.desc}</p>
