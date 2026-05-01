@@ -68,13 +68,13 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 {team.map((service) => (
               <div key={service.title} className="group bg-white p-10 rounded-3xl border border-gray-200 hover:shadow-2xl hover:-translate-y-4 hover:border-blue-400 transition-all duration-500 overflow-hidden shadow-lg">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 mb-8 mx-auto shadow-xl border-4 border-white overflow-hidden">
+<div className="mb-8 mx-auto">
                   <Image 
                     src={service.image || '/images/francis.jpeg'} 
                     alt={service.title} 
-                    width={96} 
-                    height={96} 
-                    className="w-24 h-24 object-cover rounded-full group-hover:scale-110 transition-transform duration-300 shadow-lg" 
+                    width={300} 
+                    height={300} 
+                    className="w-72 h-72 object-cover mx-auto" 
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-black mb-6 text-center group-hover:text-blue-600 transition-colors">{service.title}</h3>
