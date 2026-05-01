@@ -15,11 +15,11 @@ interface Stat {
 }
 
 export default function Home() {
-  const services: Service[] = [
-    { icon: '🧠', image: '/images/boss.jpeg', title: 'Advanced MRI', desc: 'High-field MRI with AI-enhanced imaging for superior brain visualization.' },
-    { icon: '⚡', image: '/images/francis.jpeg', title: 'EEG Monitoring', desc: 'Quantitative EEG analysis with source localization capabilities.' },
-    { icon: '🔬', image: '/images/boss.jpeg', title: 'CT & PET Scans', desc: 'Multi-modal imaging including PET for metabolic brain assessment.' },
-    { icon: '👥', image: '/images/francis.jpeg', title: 'Expert Consults', desc: 'Personalized neurology consultations with comprehensive reporting.' }
+const team: Service[] = [
+    { icon: '🧠', image: '/images/boss.jpeg', title: 'Boss (CEO)', desc: 'Managing Director with over 15 years of experience in healthcare leadership and strategic planning.' },
+    { icon: '⚡', image: '/images/francis.jpeg', title: 'Francis (Operations)', desc: 'Operations Manager ensuring seamless coordination and quality service delivery across all departments.' },
+    { icon: '🔬', image: '/images/adika.jpeg', title: 'Adika (Technical)', desc: 'Technical Manager overseeing all technical operations, equipment maintenance, and innovative solutions.' },
+    { icon: '👥', image: '/images/boss.jpeg', title: 'Expert Consults', desc: 'Personalized neurology consultations with comprehensive reporting and patient-centered care.' }
   ];
 
   const stats: Stat[] = [
@@ -66,7 +66,7 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service) => (
+{team.map((service) => (
               <div key={service.title} className="group bg-white p-10 rounded-3xl border border-gray-200 hover:shadow-2xl hover:-translate-y-4 hover:border-blue-400 transition-all duration-500 overflow-hidden shadow-lg">
                 <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 mb-8 mx-auto shadow-xl border-4 border-white overflow-hidden">
                   <Image 
