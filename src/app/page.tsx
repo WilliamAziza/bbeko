@@ -115,11 +115,11 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
                 </div>
               </div>
             </div>
-            <div className="relative">
+<div className="relative">
               <div className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 backdrop-blur-sm">
-                <Image 
-                  src="/images/students.jpg" 
-                  alt="Our Next Mock Banner" 
+<Image 
+                  src="/images/banner.jpeg" 
+                  alt="Our Team Leader" 
                   width={600} 
                   height={500}
                   className="w-full h-auto rounded-2xl shadow-lg" 
@@ -132,8 +132,8 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
                   <p className="text-white font-bold text-sm">BBEKO 2025</p>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-400/20 rounded-full blur-xl"></div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
             </div>
           </div>
         </div>
