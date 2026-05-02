@@ -117,44 +117,60 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
         </div>
       </section>
 
-<section id="location" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+<section id="location" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
         <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-black mb-8">Our Branches</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h3 className="text-3xl md:text-4xl font-black bg-gradient-to-r from-blue-900 to-indigo-900 bg-clip-text text-transparent mb-4">Our Branches</h3>
+          <p className="text-lg text-gray-600 mb-12">Serving all of Ghana with premium examination services</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-4xl hover:-translate-y-4 transition-all duration-500 border-4 border-transparent hover:border-blue-400 cursor-pointer relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
                 </svg>
-                <span className="text-gray-800 font-bold">Apenkwa Tesano</span>
               </div>
-              <p className="text-gray-600 text-sm mb-3">Accra Region</p>
-              <a href="https://maps.google.com/?q=Apenkwa+Tesano+Accra+Ghana" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline">Get Directions</a>
+              <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Apenkwa Tesano</h4>
+              <p className="text-gray-500 font-medium mb-4">Accra Region</p>
+              <a href="https://maps.google.com/?q=Apenkwa+Tesano+Accra+Ghana" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                Get Directions
+              </a>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-4xl hover:-translate-y-4 transition-all duration-500 border-4 border-transparent hover:border-emerald-400 cursor-pointer relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
                 </svg>
-                <span className="text-gray-800 font-bold">Kasoa Nyanyanyo</span>
               </div>
-              <p className="text-gray-600 text-sm mb-3">Central Region</p>
-              <a href="https://maps.google.com/?q=Kasoa+Nyanyanyo+Ghana" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline">Get Directions</a>
+              <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">Kasoa Nyanyanyo</h4>
+              <p className="text-gray-500 font-medium mb-4">Central Region</p>
+              <a href="https://maps.google.com/?q=Kasoa+Nyanyanyo+Ghana" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                Get Directions
+              </a>
             </div>
-            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-4xl hover:-translate-y-4 transition-all duration-500 border-4 border-transparent hover:border-purple-400 cursor-pointer relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
                 </svg>
-                <span className="text-gray-800 font-bold">Kumasi Odoom</span>
               </div>
-              <p className="text-gray-600 text-sm mb-3">Ashanti Region</p>
-              <a href="https://maps.google.com/?q=Kumasi+Odoom+Ghana" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline">Get Directions</a>
+              <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">Kumasi Odoom</h4>
+              <p className="text-gray-500 font-medium mb-4">Ashanti Region</p>
+              <a href="https://maps.google.com/?q=Kumasi+Odoom+Ghana" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white font-semibold rounded-xl hover:bg-purple-700 transition-colors text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+                Get Directions
+              </a>
             </div>
           </div>
-          <p className="text-gray-600 mt-6">
-            Serving all of Ghana with premium examination services across our 3 branches
-          </p>
         </div>
       </section>
 
