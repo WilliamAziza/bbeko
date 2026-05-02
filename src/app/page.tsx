@@ -113,7 +113,48 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
                 )}
               </div>
             ))}
+</div>
+        </div>
+      </section>
+
+<section id="location" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-black mb-8">Our Branches</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
+                </svg>
+                <span className="text-gray-800 font-bold">Apenkwa Tesano</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Accra Region</p>
+              <a href="https://maps.google.com/?q=Apenkwa+Tesano+Accra+Ghana" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline">Get Directions</a>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
+                </svg>
+                <span className="text-gray-800 font-bold">Kasoa Nyanyanyo</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Central Region</p>
+              <a href="https://maps.google.com/?q=Kasoa+Nyanyanyo+Ghana" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline">Get Directions</a>
+            </div>
+            <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200">
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243A8 8 0 1117.657 16.657z" />
+                </svg>
+                <span className="text-gray-800 font-bold">Kumasi Odoom</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">Ashanti Region</p>
+              <a href="https://maps.google.com/?q=Kumasi+Odoom+Ghana" target="_blank" rel="noopener noreferrer" className="text-blue-600 text-sm hover:underline">Get Directions</a>
+            </div>
           </div>
+          <p className="text-gray-600 mt-6">
+            Serving all of Ghana with premium examination services across our 3 branches
+          </p>
         </div>
       </section>
 
@@ -175,7 +216,7 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
               Send Message
             </button>
           </form>
-          <p className="mt-12 text-gray-600 text-lg">
+<p className="mt-12 text-gray-600 text-lg">
             Or call us directly: <span className="font-bold text-blue-600">(555) 123-BRAIN</span>
           </p>
         </div>
