@@ -97,17 +97,17 @@ const teamMembers: TeamMember[] = [
                   </span>
                 ))}
               </div>
-              {(member.facebook || member.instagram) && (
+{(member.facebook || member.instagram) && (
                 <div className="flex justify-center gap-4 mt-6">
                   {member.facebook && (
                     <a
                       href={member.facebook}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+                      className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg hover:scale-125 hover:shadow-2xl hover:rotate-12 transition-all duration-300 animate-pulse hover:animate-bounce"
                       aria-label="Facebook"
                     >
-                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-white animate-pulse" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85L18.77,7.46Z" />
                       </svg>
                     </a>
@@ -117,10 +117,10 @@ const teamMembers: TeamMember[] = [
                       href={member.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300"
+                      className="w-10 h-10 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 rounded-full flex items-center justify-center shadow-lg hover:scale-125 hover:shadow-2xl hover:-rotate-12 transition-all duration-300 animate-pulse hover:animate-bounce"
                       aria-label="Instagram"
                     >
-                      <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 text-white animate-pulse" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12,2.16c3.2,0,3.58,0,4.85.07,1.17.07,2.45.32,3.57.63a6.08,6.08,0,0,1,3.77,1.52,6.08,6.08,0,0,1,1.52,3.77c.31,1.12.56,2.4.63,3.57.07,1.27.07,1.65.07,4.85s0,3.58-.07,4.85c-.07,1.17-.32,2.45-.63,3.57a6.08,6.08,0,0,1-1.52,3.77,6.08,6.08,0,0,1-3.77,1.52c-1.12.31-2.4.56-3.57.63-1.27.07-1.65.07-4.85.07s-3.58,0-4.85-.07c-1.17-.07-2.45-.32-3.57-.63a6.08,6.08,0,0,1-3.77-1.52,6.08,6.08,0,0,1-1.52-3.77c-.31-1.12-.56-2.4-.63-3.57C2.53,16.79,2.53,16.41,2.53,13.21s0-3.58.07-4.85c.07-1.17.32-2.45.63-3.57a6.08,6.08,0,0,1,1.52-3.77A6.08,6.08,0,0,1,5.95,3.78c1.12-.31,2.4-.56,3.57-.63C8.42,2.53,8.8,2.53,12,2.16M12,0C8.74,0,8.33,0,7.05.07c-1.35.07-2.57.32-3.73.64a8.14,8.14,0,0,0-2.89,2.09,8.14,8.14,0,0,0-2.09,2.89C.39,5.41.14,6.63.07,8c0,.28,0,.65.07,1.93V20.07c0,.28,0,.65-.07,1.93c.07,1.37.32,2.59.64,3.75a8.14,8.14,0,0,0,2.09,2.89,8.14,8.14,0,0,0,2.89,2.09c1.16.32,2.38.57,3.75.64,1.28.07,1.65.07,1.93.07s.65,0,1.93-.07c1.37-.07,2.59-.32,3.75-.64a8.14,8.14,0,0,0,2.89-2.09,8.14,8.14,0,0,0,2.09-2.89c.32-1.16.57-2.38.64-3.75.07-1.28.07-1.65.07-1.93s0-.65-.07-1.93c-.07-1.37-.32-2.59-.64-3.75a8.14,8.14,0,0,0-2.09-2.89,8.14,8.14,0,0,0-2.89-2.09C16.28.39,15.06.14,13.7.07,12.42,0,12.05,0,11.77,0H12ZM12,5.84A6.16,6.16,0,1,0,18.16,12,6.16,6.16,0,0,0,12,5.84ZM12,16a4,4,0,1,1,4-4A4,4,0,0,1,12,16ZM18.41,4.15a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,18.41,4.15Z" />
                       </svg>
                     </a>

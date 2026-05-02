@@ -55,6 +55,86 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
             <a href="#services" className="px-10 py-5 border-2 border-white/50 bg-transparent text-white font-semibold text-lg rounded-2xl hover:bg-white/10 hover:border-white transition-all duration-300">
               View Services
             </a>
+</div>
+        </div>
+      </section>
+
+      <section id="why-choose" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="inline-block px-4 py-2 bg-white/10 text-white text-sm font-bold rounded-full mb-6 uppercase tracking-wider border border-white/20">Why Choose Us</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">Excellence in Every Examination</h2>
+              <p className="text-lg text-blue-100 mb-10 leading-relaxed">
+                We are committed to providing the most comprehensive and reliable brain examinations in Ghana, backed by years of expertise and cutting-edge technology.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 p-5 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-1">Trusted Excellence</h4>
+                    <p className="text-blue-200 text-sm">Over 20 years of proven track record in Ghana's education sector</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-5 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-1">Expert Team</h4>
+                    <p className="text-blue-200 text-sm">Certified examiners with years of academic experience</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-5 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-1">National Reach</h4>
+                    <p className="text-blue-200 text-sm">Serving 1000+ schools across all regions of Ghana</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-5 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-1">Fast Results</h4>
+                    <p className="text-blue-200 text-sm">Quick turnaround time for all examination results</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative bg-gradient-to-br from-white/10 to-white/5 rounded-3xl p-8 shadow-2xl border border-white/10 backdrop-blur-sm">
+                <Image 
+                  src="/images/students.jpg" 
+                  alt="Our Next Mock Banner" 
+                  width={600} 
+                  height={500}
+                  className="w-full h-auto rounded-2xl shadow-lg" 
+                />
+                <div className="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-2xl shadow-xl">
+                  <p className="text-sm font-bold text-gray-800">Next Mock</p>
+                  <p className="text-xs text-gray-500">Coming Soon</p>
+                </div>
+                <div className="absolute top-4 left-4 bg-blue-600 px-4 py-2 rounded-xl shadow-lg">
+                  <p className="text-white font-bold text-sm">BBEKO 2025</p>
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-400/20 rounded-full blur-xl"></div>
+            </div>
           </div>
         </div>
       </section>
