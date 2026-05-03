@@ -39,7 +39,8 @@ export default function Navbar() {
               <div className="hidden md:flex items-center space-x-8">
                 <a href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">Home</a>
                 <a href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">Services</a>
-<a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">About</a>
+                <a href="/resources" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 px-3 bg-indigo-100/50 px-4 py-2 rounded-xl">Resources</a>
+                <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">About</a>
                 <a href="/register" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors py-2 px-3 bg-emerald-100/50 px-4 py-2 rounded-xl">Register Mock</a>
                 <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">Contact</a>
               </div>
@@ -51,7 +52,8 @@ export default function Navbar() {
               <div className="px-4 pt-4 pb-6 space-y-4">
                 <a href="/" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">Home</a>
                 <a href="/services" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">Services</a>
-<a href="/about" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">About</a>
+                <a href="/resources" className="block text-gray-700 hover:text-indigo-600 font-bold py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors bg-indigo-50 border border-indigo-200">Resources</a>
+                <a href="/about" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">About</a>
                 <a href="/register" className="block text-gray-700 hover:text-emerald-600 font-bold py-2 px-3 rounded-lg hover:bg-emerald-50 transition-colors bg-emerald-50 border border-emerald-200">Register Mock</a>
                 <a href="/contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">Contact</a>
               </div>
