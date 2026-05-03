@@ -1,14 +1,1 @@
-## Task: Update Home Page - "MEET OUR TEAM" Font Style & Boss/Francis Images in Boxes
-
-### Approved Plan Summary
-- Update src/app/page.tsx: Change "Meet Our team" h2 font style (to serif/italic/cursive via Tailwind classes).
-- Add boss/francis images to the 4 service card boxes (circular avatars replacing icons).
-
-### Steps to Complete
-- [x] Step 1: Edit src/app/page.tsx - Update h2 font class and add Image components to service cards with src/images/francis.jpeg & boss.jpeg.
-- [x] Step 2: Verify changes (no new deps/CSS needed).
-- [x] Step 3: Test with `npm run dev` (refresh page).
-- [x] Step 4: Mark complete.
-
-Progress: All steps complete. ✅
-
+# Task Complete: Expert Consults image replaced with mawuli.jpg on home page&#10;&#10;- Copied src/images/mawuli.jpg → public/images/mawuli.jpg&#10;- Updated src/app/page.tsx team[3].image to '/images/mawuli.jpg'&#10;- Changes applied successfully (see diffs).&#10;&#10;Run `npm run dev` to view at http://localhost:3000
