@@ -6,41 +6,29 @@ import { useState } from 'react';
 export default function Resources() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const resources = [
-    {
-      title: 'BBEK Scheme of Work 2025',
-      description: 'Complete curriculum guide and scheme of work for BBEK examinations.',
-      icon: '📚',
-      file: '/downloads/scheme-of-work.pdf',
-      type: 'PDF (2.5MB)'
-    },
-    {
-      title: 'Sample Question Paper',
-      description: 'Practice questions from previous examinations.',
-      icon: '📝',
-      file: '/downloads/sample-questions.pdf',
-      type: 'PDF (1.2MB)'
-    },
-    {
-      title: 'Examination Guidelines',
-      description: 'Detailed rules and guidelines for BBEK exams.',
-      icon: '📋',
-      file: '/downloads/guidelines.pdf',
-      type: 'PDF (800KB)'
-    },
-    {
-      title: 'Results Interpretation Guide',
-      description: 'How to read and understand your examination results.',
-      icon: '📊',
-      file: '/downloads/results-guide.pdf',
-      type: 'PDF (600KB)'
-    }
+  const schemes = [
+    { title: 'Nursery Scheme - 3rd Term', file: '/files/NURSERY- THIRD TERM (1).pdf', icon: '👶' },
+    { title: 'KG 1 Scheme - 3rd Term', file: '/files/KG 1- THIRD TERM (1).pdf', icon: '🧒' },
+    { title: 'KG 2 Scheme - 3rd Term', file: '/files/KG 2- THIRD TERM (1).pdf', icon: '🧒' },
+    { title: 'Basic 1 Scheme - 3rd Term', file: '/files/BASIC 1 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 2 Scheme - 3rd Term', file: '/files/BASIC 2 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 3 Scheme - 3rd Term', file: '/files/BASIC 3 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 4 Scheme - 3rd Term', file: '/files/BASIC 4 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 5 Scheme - 3rd Term', file: '/files/BASIC 5 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 6 Scheme - 3rd Term', file: '/files/BASIC 6  SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 7 Scheme - 3rd Term', file: '/files/BASIC 7  SCEHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 8 Scheme - 3rd Term (1)', file: '/files/BASIC 8 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
+    { title: 'Basic 8 Scheme - 3rd Term (2)', file: '/files/BASIC 8 SCHEME - 3RD TERM (2).pdf', icon: '📖' }
   ];
 
-  const handleDownload = (file) => {
-    // Placeholder - in production use server action or external CDN
+  interface Scheme {
+    title: string;
+    file: string;
+    icon: string;
+  }
+
+  const handleDownload = (file: string) => {
     console.log('Downloading:', file);
-    alert('Download started! Check console. (Placeholder - add real PDF to public/downloads/)');
     window.open(file, '_blank');
   };
 
@@ -60,28 +48,20 @@ export default function Resources() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
-          {resources.map((resource, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
+          {schemes.map((scheme, index) => (
             <div 
               key={index}
-              className="group bg-white/80 backdrop-blur-md rounded-3xl p-10 shadow-2xl hover:shadow-3xl hover:-translate-y-3 transition-all duration-500 border border-indigo-100 hover:border-indigo-200 cursor-pointer h-full"
-              onClick={() => handleDownload(resource.file)}
+              className="group bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 border border-indigo-100 hover:border-indigo-300 cursor-pointer h-full flex flex-col"
+              onClick={() => handleDownload(scheme.file)}
             >
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 transition-transform">
-                  <span className="text-3xl">{resource.icon}</span>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-indigo-700 transition-colors">{resource.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">{resource.description}</p>
-                  <div className="flex items-center gap-2 text-sm font-medium text-indigo-600 group-hover:text-indigo-700">
-                    <span>{resource.type}</span>
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10l-5.5 5.5m0 0L8 19l5.5-5.5m0 0L19 8m-5.5 5.5v11m0 0l4.5-4.5m-4.5 4.5H9" />
-                    </svg>
-                  </div>
-                </div>
+              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl mb-6 shadow-xl group-hover:scale-110 transition-transform mx-auto flex-shrink-0">
+                <span className="text-2xl">{scheme.icon}</span>
               </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-700 transition-colors flex-grow">{scheme.title}</h3>
+              <button className="mt-auto bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full">
+                📥 Download PDF
+              </button>
             </div>
           ))}
         </div>
@@ -93,15 +73,14 @@ export default function Resources() {
               Our comprehensive scheme of work covers all topics tested in BBEK examinations.
               All schools should download and review before mock and main exams.
             </p>
-            <button 
-              onClick={() => handleDownload('/downloads/scheme-of-work.pdf')}
-              className="inline-flex items-center gap-4 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white font-bold px-12 py-6 text-xl rounded-3xl shadow-2xl hover:shadow-4xl hover:scale-105 transition-all duration-300 border-2 border-white/30 group"
-            >
-              <span>📥 Download Scheme of Work</span>
-              <svg className="w-6 h-6 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10l-5.5 5.5m0 0L8 19l5.5-5.5m0 0L19 8m-5.5 5.5v11m0 0l4.5-4.5m-4.5 4.5H9" />
-              </svg>
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/files/NURSERY- THIRD TERM (1).pdf" className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold px-12 py-6 text-xl rounded-3xl shadow-2xl hover:shadow-4xl hover:scale-105 transition-all duration-300 border-2 border-white/30 inline-flex items-center gap-3" download>
+                <span>📥 All Schemes (Folder)</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10l-5.5 5.5m0 0L8 19l5.5-5.5m0 0L19 8m-5.5 5.5v11m0 0l4.5-4.5m-4.5 4.5H9" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
