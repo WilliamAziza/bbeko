@@ -124,9 +124,9 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
                   height={500}
                   className="w-full h-auto rounded-2xl shadow-lg" 
                 />
-                <div className="absolute -bottom-4 -right-4 bg-white px-6 py-3 rounded-2xl shadow-xl">
-                  <p className="text-sm font-bold text-gray-800">Next Mock</p>
-                  <p className="text-xs text-gray-500">Coming Soon</p>
+                <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 px-6 py-3 rounded-2xl shadow-xl cursor-pointer group hover:scale-105 transition-all duration-300 border-2 border-white/20" onClick={() => window.location.href='/register'}>
+                  <p className="text-sm font-bold text-white group-hover:translate-x-1 transition-transform">Next Mock Registration</p>
+                  <p className="text-xs text-white/90">BBEKO 2025 - Register Now</p>
                 </div>
                 <div className="absolute top-4 left-4 bg-blue-600 px-4 py-2 rounded-xl shadow-lg">
                   <p className="text-white font-bold text-sm">BBEKO 2025</p>
