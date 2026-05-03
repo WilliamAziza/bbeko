@@ -56,7 +56,10 @@ export default function Resources() {
               onClick={() => handleDownload(scheme.file)}
             >
 
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-700 transition-colors flex-grow line-clamp-2">{scheme.title}</h3>
+              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl mb-4 shadow-xl group-hover:scale-110 transition-transform mx-auto flex-shrink-0">
+                <Image src="/images/scheme.png" alt="Scheme" width={48} height={48} className="w-12 h-12 object-contain" priority />
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-700 transition-colors line-clamp-2">{scheme.title}</h3>
               <button className="mt-auto bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full text-sm sm:text-base">
                 📥 Download PDF
               </button>
