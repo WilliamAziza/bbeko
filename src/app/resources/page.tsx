@@ -7,18 +7,18 @@ export default function Resources() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const schemes = [
-    { title: 'Nursery Scheme - 3rd Term', file: '/files/NURSERY- THIRD TERM (1).pdf', icon: '👶' },
-    { title: 'KG 1 Scheme - 3rd Term', file: '/files/KG 1- THIRD TERM (1).pdf', icon: '🧒' },
-    { title: 'KG 2 Scheme - 3rd Term', file: '/files/KG 2- THIRD TERM (1).pdf', icon: '🧒' },
-    { title: 'Basic 1 Scheme - 3rd Term', file: '/files/BASIC 1 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 2 Scheme - 3rd Term', file: '/files/BASIC 2 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 3 Scheme - 3rd Term', file: '/files/BASIC 3 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 4 Scheme - 3rd Term', file: '/files/BASIC 4 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 5 Scheme - 3rd Term', file: '/files/BASIC 5 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 6 Scheme - 3rd Term', file: '/files/BASIC 6  SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 7 Scheme - 3rd Term', file: '/files/BASIC 7  SCEHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 8 Scheme - 3rd Term (1)', file: '/files/BASIC 8 SCHEME - 3RD TERM (1).pdf', icon: '📖' },
-    { title: 'Basic 8 Scheme - 3rd Term (2)', file: '/files/BASIC 8 SCHEME - 3RD TERM (2).pdf', icon: '📖' }
+    { title: 'Nursery Scheme - 3rd Term', file: '/files/NURSERY- THIRD TERM (1).pdf', icon: '📄' },
+    { title: 'KG 1 Scheme - 3rd Term', file: '/files/KG 1- THIRD TERM (1).pdf', icon: '📄' },
+    { title: 'KG 2 Scheme - 3rd Term', file: '/files/KG 2- THIRD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 1 Scheme - 3rd Term', file: '/files/BASIC 1 SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 2 Scheme - 3rd Term', file: '/files/BASIC 2 SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 3 Scheme - 3rd Term', file: '/files/BASIC 3 SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 4 Scheme - 3rd Term', file: '/files/BASIC 4 SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 5 Scheme - 3rd Term', file: '/files/BASIC 5 SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 6 Scheme - 3rd Term', file: '/files/BASIC 6  SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 7 Scheme - 3rd Term', file: '/files/BASIC 7  SCEHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 8 Scheme - 3rd Term (1)', file: '/files/BASIC 8 SCHEME - 3RD TERM (1).pdf', icon: '📄' },
+    { title: 'Basic 8 Scheme - 3rd Term (2)', file: '/files/BASIC 8 SCHEME - 3RD TERM (2).pdf', icon: '📄' }
   ];
 
   interface Scheme {
@@ -55,9 +55,7 @@ export default function Resources() {
               className="group bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 border border-indigo-100 hover:border-indigo-300 cursor-pointer h-full flex flex-col"
               onClick={() => handleDownload(scheme.file)}
             >
-              <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl mb-6 shadow-xl group-hover:scale-110 transition-transform mx-auto flex-shrink-0">
-                <span className="text-2xl">{scheme.icon}</span>
-              </div>
+
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-700 transition-colors flex-grow line-clamp-2">{scheme.title}</h3>
               <button className="mt-auto bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full text-sm sm:text-base">
                 📥 Download PDF
