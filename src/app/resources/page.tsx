@@ -48,7 +48,7 @@ export default function Resources() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-20">
           {schemes.map((scheme, index) => (
             <div 
               key={index}
@@ -58,8 +58,8 @@ export default function Resources() {
               <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl mb-6 shadow-xl group-hover:scale-110 transition-transform mx-auto flex-shrink-0">
                 <span className="text-2xl">{scheme.icon}</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-700 transition-colors flex-grow">{scheme.title}</h3>
-              <button className="mt-auto bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-indigo-700 transition-colors flex-grow line-clamp-2">{scheme.title}</h3>
+              <button className="mt-auto bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full text-sm sm:text-base">
                 📥 Download PDF
               </button>
             </div>
