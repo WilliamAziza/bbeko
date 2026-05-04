@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import React from 'react';
 
 interface Service {
   icon: string;
@@ -31,6 +32,9 @@ const team: Service[] = [
     { label: 'Care', value: 'Patient-centered approach' }
   ];
 
+const [selectedLocation, setSelectedLocation] = React.useState(null);
+const [isMapOpen, setIsMapOpen] = React.useState(false);
+
 const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -39,8 +43,46 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
     e.currentTarget.reset();
   };
 
+const locations = [
+  { name: 'Apenkwa Tesano', region: 'Accra Region', embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.984!2d-0.234!3d5.612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNqLDM2JzQxLjQiTiAwwrDE0JzE0LjQiVw!5e0!3m2!1sen!2sgh!4v1699999999999!5m2!1sen!2sgh' },
+  { name: 'Kasoa Nyanyanyo', region: 'Central Region', embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10552.85!2d-0.405!3d5.512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNqLCMwJzQwLjciTiAwwrAyNCcxMi4yIlc!5e0!3m2!1sen!2sgh!4v1699999999999!5m2!1sen!2sgh' },
+  { name: 'Kumasi Odoom', region: 'Ashanti Region', embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10552.85!2d-1.623!3d6.688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDEnMTYuMiJOIDHCsDM3JzM2LjciVw!5e0!3m2!1sen!2sgh!4v1700000000000!5m2!1sen!2sgh' }
+];
+
   return (
     <>
+      {isMapOpen && selectedLocation && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setIsMapOpen(false)}>
+          <div className="bg-white rounded-3xl p-6 max-w-4xl w-full max-h-[90vh] overflow-hidden relative shadow-2xl" onClick={e => e.stopPropagation()}>
+            <button className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold" onClick={() => setIsMapOpen(false)}>
+              ×
+            </button>
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">{selectedLocation.name}</h2>
+              <p className="text-lg text-gray-600">{selectedLocation.region}</p>
+            </div>
+            <iframe
+              src={selectedLocation.embed}
+              width="100%"
+              height="500"
+              style={{border:0}}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full rounded-2xl"
+            />
+            <div className="mt-6 text-center">
+              <a href={`https://maps.google.com/?q=${encodeURIComponent(selectedLocation.name)}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-2xl hover:bg-blue-700 transition-all">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.243 0z"/>
+                </svg>
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
       <section className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 bg-[url('/images/students.jpg')] bg-cover bg-center relative opacity-80 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:to-black/70 before:z-[-1]">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-8 leading-tight">
@@ -211,12 +253,12 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Apenkwa Tesano</h4>
               <p className="text-gray-500 font-medium mb-4">Accra Region</p>
-              <a href="https://maps.google.com/?q=Apenkwa+Tesano+Accra+Ghana" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors text-sm">
+<button onClick={() => { setSelectedLocation(locations[0]); setIsMapOpen(true); }} className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors text-sm">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                Get Directions
-              </a>
+                View Map
+              </button>
             </div>
             <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-4xl hover:-translate-y-4 transition-all duration-500 border-4 border-transparent hover:border-emerald-400 cursor-pointer relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -227,12 +269,12 @@ const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
               </div>
               <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">Kasoa Nyanyanyo</h4>
               <p className="text-gray-500 font-medium mb-4">Central Region</p>
-              <a href="https://maps.google.com/?q=Kasoa+Nyanyanyo+Ghana" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors text-sm">
+<button onClick={() => { setSelectedLocation(locations[1]); setIsMapOpen(true); }} className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors text-sm">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                Get Directions
-              </a>
+                View Map
+              </button>
             </div>
             <div className="group bg-white rounded-3xl p-8 shadow-2xl hover:shadow-4xl hover:-translate-y-4 transition-all duration-500 border-4 border-transparent hover:border-purple-400 cursor-pointer relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
