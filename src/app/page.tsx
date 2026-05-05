@@ -312,18 +312,7 @@ const locations = [
       <a href="/contact" className="hover:text-white transition-colors font-semibold drop-shadow">Contact</a>
     </div>
   </div>
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center items-center space-x-6 mb-8 opacity-75">
-            <Image src="/images/logo.jpeg" alt="BEK" width={32} height={32} className="h-auto w-auto" />
-          </div>
-          <p className="text-gray-600 mb-4">© 2026 Best Brain Examinations KOnsortium. All rights reserved.</p>
-          <div className="flex justify-center items-center space-x-8 text-sm text-gray-500 opacity-60">
-            <a href="#" className="hover:text-blue-600 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-blue-600 transition-colors">Terms</a>
-            <a href="#" className="hover:text-blue-600 transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+</footer>
     </>
   );
 }
