@@ -1,1 +1,16 @@
-# Google Maps for Branch Locations&#10;&#10;## Plan&#10;- Add state for map modal/open branch&#10;- Replace Get Directions with button toggling modal with iframe map&#10;- Maps: Apenkwa Tesano, Kasoa Nyanyanyo, Kumasi Odoom (embed iframes)&#10;&#10;## Steps&#10;1. [] Update src/app/page.tsx with modal + maps&#10;2. [] Test responsive modals&#10;
+# Task: Update "Why Choose Us" section on home page (src/app/page.tsx)
+
+## Steps:
+- [ ] 1. Create TODO.md with breakdown (current)
+- [ ] 2. Edit src/app/page.tsx to update Why Choose Us section per approved plan
+- [ ] 3. Verify changes with `npm run dev` (if needed)
+- [ ] 4. Update TODO.md with completion status
+- [ ] 5. Attempt completion
+
+## Steps:
+- [x] 1. Create TODO.md with breakdown 
+- [x] 2. Edit src/app/page.tsx to update Why Choose Us section per approved plan
+- [x] 3. Verify changes with `npm run dev` (if needed)
+- [x] 4. Update TODO.md with completion status
+
+Task completed.
