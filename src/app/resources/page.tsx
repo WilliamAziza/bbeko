@@ -28,8 +28,12 @@ export default function Resources() {
   }
 
   const handleDownload = (file: string) => {
-    console.log('Downloading:', file);
-    window.open(file, '_blank');
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = file.split('/').pop() || 'scheme.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
