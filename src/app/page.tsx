@@ -98,7 +98,8 @@ const locations = [
             <a href="#services" className="px-10 py-5 border-2 border-white/50 bg-transparent text-white font-semibold text-lg rounded-2xl hover:bg-white/10 hover:border-white transition-all duration-300">
               View Services
             </a>
-</div>
+              
+          </div>
         </div>
       </section>
 
@@ -106,8 +107,7 @@ const locations = [
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block px-4 py-2 bg-white/10 text-white text-sm font-bold rounded-full mb-6 uppercase tracking-wider border border-white/20">Why Choose Us</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">Why Choose Us For Your Upcoming Examinations</h2>
+                     <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">Why Choose Us For Your Upcoming Examinations</h2>
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
                 You have guarantee for excellence. If 100% of your students do not
                 pass with distinction at the BECE after taking all our mocks, we
@@ -146,6 +146,7 @@ const locations = [
                     <h4 className="text-xl font-bold text-white mb-1">Highest Standards</h4>
                     <p className="text-blue-200">Our exams are of the highest standard and comprehensive enough to meet the tutelage of the teachers and examine the students of what they have been taught whilst meeting the syllabus and the standards of the curriculum.</p>
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -165,13 +166,7 @@ const locations = [
                 <div className="absolute top-4 left-4 bg-blue-600 px-4 py-2 rounded-xl shadow-lg">
   <p className="text-white font-bold text-sm">BBEKO 2026</p>
                 </div>
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-2xl hover:shadow-white/20 transition-all duration-300 z-20 cursor-pointer">
-                  <span>Beacon of Light Book</span>
-                  <a href="https://wa.me/233249273049?text=I%20want%20to%20purchase%20the%20Beacon%20of%20Light%20Book" target="_blank" rel="noopener noreferrer" className="mt-2 block bg-white/30 hover:bg-white/50 px-4 py-2 rounded-lg font-bold">
-                    💬 Purchase
-                  </a>
-                </div>
-                <p className="absolute bottom-2 left-1/2 -translate-x-1/2 text-white/90 text-xs text-center max-w-xs z-10 mx-4">Click on this button to purchase the Beacon of Light Book</p>
+
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
               <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
