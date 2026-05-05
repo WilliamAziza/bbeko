@@ -6,62 +6,80 @@ import { useState } from "react";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <>
-      <nav className="bg-white/95 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <a href="/" className="flex items-center space-x-2">
-                <Image 
-                  src="/images/logo.jpeg" 
-                  alt="BBEK Logo" 
-                  width={40} 
-                  height={40} 
-                  className="rounded-lg h-auto w-auto object-contain" 
-                  priority 
-                />
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/services', label: 'Services' },
+    { href: '/resources', label: 'Resources' },
+    { href: '/about', label: 'About' },
+    { href: '/register', label: 'Register Mock' },
+    { href: '/contact', label: 'Contact' }
+  ];
 
-              </a>
-            </div>
-            
-            <div className="flex items-center">
-              <button 
-                className="md:hidden p-1 -mr-1 rounded-full hover:bg-gray-200 focus:outline-none focus:shadow-outline transition-colors"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Toggle menu"
+  return (
+    <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 lg:h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
+              <Image 
+                src="/images/logo.jpeg" 
+                alt="BBEK Logo" 
+                width={48} 
+                height={48} 
+                className="rounded-xl shadow-md hover:shadow-lg transition-shadow" 
+                priority 
+              />
+              <span className="text-xl font-bold text-gray-900 hidden lg:inline">BBEK</span>
+            </a>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className="relative font-semibold text-gray-700 hover:text-blue-600 px-4 py-2 rounded-2xl transition-all duration-300 hover:bg-blue-50 hover:shadow-md group"
               >
-                <svg className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-              
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">Home</a>
-                <a href="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">Services</a>
-                <a href="/resources" className="text-gray-700 hover:text-indigo-600 font-medium transition-colors py-2 px-3 bg-indigo-100/50 px-4 py-2 rounded-xl">Resources</a>
-                <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">About</a>
-                <a href="/register" className="text-gray-700 hover:text-emerald-600 font-medium transition-colors py-2 px-3 bg-emerald-100/50 px-4 py-2 rounded-xl">Register Mock</a>
-                <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 px-3">Contact</a>
-              </div>
+                {link.label}
+                <span className="absolute inset-0 bg-blue-100 rounded-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-100 group-hover:scale-110 origin-center"></span>
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex lg:hidden items-center">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-xl hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-200"
+              aria-label="Toggle menu"
+            >
+              <svg className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+            <div className="px-4 pt-4 pb-6 space-y-4">
+              {navLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="block font-semibold text-gray-700 hover:text-blue-600 py-3 px-4 rounded-xl hover:bg-blue-50 transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
-          
-          {isMenuOpen && (
-            <div className="md:hidden bg-white border-t border-gray-200">
-              <div className="px-4 pt-4 pb-6 space-y-4">
-                <a href="/" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">Home</a>
-                <a href="/services" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">Services</a>
-                <a href="/resources" className="block text-gray-700 hover:text-indigo-600 font-bold py-2 px-3 rounded-lg hover:bg-indigo-50 transition-colors bg-indigo-50 border border-indigo-200">Resources</a>
-                <a href="/about" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">About</a>
-                <a href="/register" className="block text-gray-700 hover:text-emerald-600 font-bold py-2 px-3 rounded-lg hover:bg-emerald-50 transition-colors bg-emerald-50 border border-emerald-200">Register Mock</a>
-                <a href="/contact" className="block text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-lg hover:bg-gray-100 transition-colors">Contact</a>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-    </>
+        )}
+      </div>
+    </nav>
   );
 }
-
