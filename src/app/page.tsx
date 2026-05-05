@@ -296,69 +296,7 @@ const locations = [
         </div>
       </section>
 
-      <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 text-sm font-semibold rounded-full mb-8 uppercase tracking-wider">About KOnsortium</span>
-            <h2 className="text-5xl md:text-6xl font-bold text-black mb-8 leading-tight">Excellence in Neurology</h2>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-lg">
-              Our Konsortium brings together world-class neurologists, neuroradiologists, and cutting-edge technology to deliver unmatched brain examination services. 
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex items-start space-x-4 p-6 bg-blue-50 rounded-2xl border-l-4 border-blue-400">
-                  <span className="text-2xl font-bold text-blue-600 flex-shrink-0 mt-1">✓</span>
-                  <div>
-                    <p className="font-semibold text-black">{stat.label}</p>
-                    <p className="text-gray-600">{stat.value}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-                Schedule Consultation
-              </a>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="relative bg-gradient-to-br from-blue-50 to-slate-50 rounded-3xl p-12 shadow-2xl border border-blue-200/50 overflow-hidden">
-              <Image src="/window.svg" alt="Advanced Technology" width={500} height={400} className="w-full h-80 object-cover rounded-2xl mx-auto shadow-2xl relative z-10" />
-              <div className="absolute -top-4 -right-4 w-32 h-32 bg-blue-200/30 rounded-full blur-xl animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-300/30 rounded-full blur-xl animate-pulse"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-black mb-6">Ready for Precision Diagnosis?</h2>
-          <p className="text-xl text-gray-600 mb-16 max-w-lg mx-auto leading-relaxed">
-            Contact our team to schedule your advanced brain examination.
-          </p>
-          <form className="space-y-6 w-full max-w-lg mx-auto bg-white/80 backdrop-blur-md rounded-3xl p-12 shadow-2xl border border-gray-200/50" onSubmit={handleSubmit}>
-            <div>
-              <input type="text" name="name" placeholder="Full Name" className="w-full p-5 border border-gray-300/50 rounded-2xl bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-200/50 transition-all text-lg font-medium" required />
-            </div>
-            <div>
-              <input type="email" name="email" placeholder="Email Address" className="w-full p-5 border border-gray-300/50 rounded-2xl bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-200/50 transition-all text-lg font-medium" required />
-            </div>
-            <div>
-              <input type="tel" name="phone" placeholder="Phone (Optional)" className="w-full p-5 border border-gray-300/50 rounded-2xl bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-200/50 transition-all text-lg font-medium" />
-            </div>
-            <div>
-              <textarea name="message" rows={5} placeholder="Tell us about your needs..." className="w-full p-5 border border-gray-300/50 rounded-2xl bg-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-200/50 transition-all text-lg font-medium resize-vertical" required />
-            </div>
-            <button type="submit" className="w-full p-6 bg-blue-600 text-white font-bold text-xl rounded-2xl hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
-              Send Message
-            </button>
-          </form>
-<p className="mt-12 text-gray-600 text-lg">
-            Or call us directly: <span className="font-bold text-blue-600">(555) 123-BRAIN</span>
-          </p>
-        </div>
-      </section>
 
       <footer className="bg-gray-50 border-t border-gray-200 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
