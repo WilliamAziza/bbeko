@@ -28,14 +28,14 @@ export default function Register() {
     'Other'
   ];
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('School Registration:', formData);
     alert('Thank you! Your school registration for BBEKO 2025 has been submitted. We will contact you within 48 hours with details.');
