@@ -69,7 +69,7 @@ export default function Resources() {
 
         <div className="text-center">
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-12 rounded-4xl shadow-3xl mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 drop-shadow-2xl">Scheme of Work 2025</h2>
+<h2 className="text-4xl md:text-5xl font-black mb-6 drop-shadow-2xl">Scheme of Work 2026</h2>
             <p className="text-xl leading-relaxed mb-8 opacity-95 drop-shadow-xl">
               Our comprehensive scheme of work covers all topics tested in BBEK examinations.
               All schools should download and review before mock and main exams.

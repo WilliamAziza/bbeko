@@ -168,10 +168,10 @@ const locations = [
                 />
                 <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 px-6 py-3 rounded-2xl shadow-xl cursor-pointer group hover:scale-105 transition-all duration-300 border-2 border-white/20" onClick={() => window.location.href='/register'}>
                   <p className="text-sm font-bold text-white group-hover:translate-x-1 transition-transform">Next Mock Registration</p>
-                  <p className="text-xs text-white/90">BBEKO 2025 - Register Now</p>
+<p className="text-xs text-white/90">BBEKO 2026 - Register Now</p>
                 </div>
                 <div className="absolute top-4 left-4 bg-blue-600 px-4 py-2 rounded-xl shadow-lg">
-                  <p className="text-white font-bold text-sm">BBEKO 2025</p>
+  <p className="text-white font-bold text-sm">BBEKO 2026</p>
                 </div>
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
@@ -298,12 +298,25 @@ const locations = [
 
 
 
-      <footer className="bg-gray-50 border-t border-gray-200 py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gradient-to-r from-indigo-900 via-blue-900 to-purple-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20"></div>
+  <div className="relative max-w-7xl mx-auto text-center z-10">
+    <div className="flex justify-center items-center space-x-6 mb-12 opacity-90">
+      <Image src="/images/logo.jpeg" alt="BEK" width={48} height={48} className="rounded-2xl shadow-2xl" />
+    </div>
+    <p className="text-indigo-100 mb-8 text-xl font-semibold drop-shadow-lg">© 2026 Best Brain Examinations KOnsortium. All rights reserved.</p>
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-12 text-indigo-200 text-lg">
+      <a href="/about" className="hover:text-white transition-colors font-semibold drop-shadow">About</a>
+      <a href="/services" className="hover:text-white transition-colors font-semibold drop-shadow">Services</a>
+      <a href="/register" className="hover:text-white transition-colors font-semibold drop-shadow">Register</a>
+      <a href="/contact" className="hover:text-white transition-colors font-semibold drop-shadow">Contact</a>
+    </div>
+  </div>
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center items-center space-x-6 mb-8 opacity-75">
             <Image src="/images/logo.jpeg" alt="BEK" width={32} height={32} className="h-auto w-auto" />
           </div>
-          <p className="text-gray-600 mb-4">© 2024 Best Brain Examinations KOnsortium. All rights reserved.</p>
+          <p className="text-gray-600 mb-4">© 2026 Best Brain Examinations KOnsortium. All rights reserved.</p>
           <div className="flex justify-center items-center space-x-8 text-sm text-gray-500 opacity-60">
             <a href="#" className="hover:text-blue-600 transition-colors">Privacy</a>
             <a href="#" className="hover:text-blue-600 transition-colors">Terms</a>

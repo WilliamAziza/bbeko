@@ -38,7 +38,7 @@ export default function Register() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('School Registration:', formData);
-    alert('Thank you! Your school registration for BBEKO 2025 has been submitted. We will contact you within 48 hours with details.');
+alert('Thank you! Your school registration for BBEKO 2026 has been submitted. We will contact you within 48 hours with details.');
     setFormData({
       schoolName: '',
       contactPerson: '',
@@ -58,11 +58,11 @@ export default function Register() {
             Register Your School
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-            Secure your spot for BBEKO 2025 - Best Brain Examinations Mock for Schools. Limited spots available!
+Secure your spot for BBEKO 2026 - Best Brain Examinations Mock for Schools. Limited spots available!
           </p>
           <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-600 text-white font-bold text-xl rounded-3xl shadow-2xl">
             <span>📚</span>
-            <span>BBEKO 2025 MOCK EXAM</span>
+<span>BBEKO 2026 MOCK EXAM</span>
           </div>
         </div>
 
@@ -182,7 +182,7 @@ export default function Register() {
                   <span className="text-3xl">📅</span>
                 </div>
                 <h4 className="text-2xl font-bold text-emerald-900 mb-4">Mock Exam Date</h4>
-                <p className="text-lg text-gray-700 mb-4">BBEKO 2025</p>
+<p className="text-lg text-gray-700 mb-4">BBEKO 2026</p>
                 <p className="text-emerald-700 font-semibold text-xl">Coming Soon</p>
               </div>
               <div className="bg-white/80 p-10 rounded-3xl border border-emerald-100 shadow-2xl hover:shadow-3xl transition-all duration-300 backdrop-blur-md">
