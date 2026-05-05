@@ -32,7 +32,7 @@ const team: Service[] = [
     { label: 'Care', value: 'Patient-centered approach' }
   ];
 
-const [selectedLocation, setSelectedLocation] = React.useState(null);
+const [selectedLocation, setSelectedLocation] = React.useState<any>(null);
 const [isMapOpen, setIsMapOpen] = React.useState(false);
 
 const handleSubmit = function (e: React.FormEvent<HTMLFormElement>) {
