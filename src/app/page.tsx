@@ -184,20 +184,21 @@ const locations = [
               State-of-the-art brain imaging and analysis powered by leading experts.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 {team.map((service) => (
-              <div key={service.title} className="group bg-white p-10 rounded-3xl border border-gray-200 hover:shadow-2xl hover:-translate-y-4 hover:border-blue-400 transition-all duration-500 overflow-hidden shadow-lg">
-<div className="mb-8 mx-auto">
+              <div key={service.title} className="group bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-2xl hover:-translate-y-3 hover:border-blue-400 transition-all duration-500 overflow-hidden shadow-lg">
+<div className="mb-5 mx-auto">
                   <Image 
                     src={service.image || '/images/francis.jpeg'} 
                     alt={service.title} 
-                    width={300} 
-                    height={300} 
-                    className="w-72 h-72 object-cover mx-auto" 
+                    width={220} 
+                    height={220} 
+                    className="w-44 h-44 sm:w-48 sm:h-48 object-cover mx-auto rounded-xl" 
                   />
                 </div>
-<h3 className="text-2xl font-bold text-black mb-6 text-center group-hover:text-blue-600 transition-colors">{service.title}</h3>
-                <p className="text-gray-600 text-center leading-relaxed group-hover:text-black">{service.desc}</p>
+<h3 className="text-xl font-bold text-black mb-3 text-center group-hover:text-blue-600 transition-colors">{service.title}</h3>
+                <p className="text-gray-600 text-center leading-relaxed group-hover:text-black text-sm line-clamp-3">{service.desc}</p>
+
                 {(service.facebook || service.instagram) && (
                   <div className="flex justify-center gap-4 mt-6">
                     {service.facebook && (
