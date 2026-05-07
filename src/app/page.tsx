@@ -20,7 +20,7 @@ interface Stat {
 export default function Home() {
 const team: Service[] = [
     { icon: '🧠', image: '/images/boss.jpeg', title: 'Bacon Atsu Amengor', desc: 'Founder & CEO', facebook: 'https://web.facebook.com/bacon.amengor.5' },
-    { icon: '⚡', image: '/images/francis.jpeg', title: 'Francis (<Operati>p</Operati>ons)', desc: 'Operations Manager ensuring seamless coordination and quality service delivery across all departments.', facebook: 'https://facebook.com/francisops', instagram: 'https://instagram.com/francisops' },
+    { icon: '⚡', image: '/images/francis.jpeg', title: 'Francis Vinyo', desc: 'Operations Manager ensuring seamless coordination and quality service delivery across all departments.', facebook: 'https://web.facebook.com/vinyo.francis' },
     { icon: '🔬', image: '/images/adika.jpeg', title: 'Adika (Technical)', desc: 'Technical Manager overseeing all technical operations, equipment maintenance, and innovative solutions.', facebook: 'https://facebook.com/adikatech', instagram: 'https://instagram.com/adikatech' },
 { icon: '👥', image: '/images/mawuli.jpg', title: 'Expert Consults', desc: 'Personalized neurology consultations with comprehensive reporting and patient-centered care.', facebook: 'https://facebook.com/expertconsults', instagram: 'https://instagram.com/expertconsults' }
   ];
